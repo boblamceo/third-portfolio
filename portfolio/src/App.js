@@ -20,7 +20,9 @@ function App() {
 
   const navigate = useNavigate();
   useEffect(() => {
-    setOpen(true);
+    setTimeout(() => {
+      setOpen(true);
+    }, 2000);
   }, []);
 
   return (
