@@ -66,9 +66,11 @@ function App() {
               whileHover={{ scale: 1.2, rotate: 360 }}
               transition={{ type: "spring" }}
               onClick={() => setOpen(false)}
-              fontSize="larger"
             >
-              <SentimentVeryDissatisfiedIcon className={"icon"} />
+              <SentimentVeryDissatisfiedIcon
+                className={"icon"}
+                fontSize="larger"
+              />
             </motion.div>
           </div>
         </div>
