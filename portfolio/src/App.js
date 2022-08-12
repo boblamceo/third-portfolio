@@ -20,10 +20,8 @@ function App() {
 
   const navigate = useNavigate();
   useEffect(() => {
-    setTimeout(() => {
-      setOpen(true);
-    }, 2000);
-  }, []);
+    setOpen(true);
+  }, [musicPlay]);
 
   return (
     <motion.div animate={{ opacity: opacity }} className="activate-container">
