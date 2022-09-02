@@ -1,11 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=League+Spartan:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 ::-webkit-scrollbar {
   display: none;
 }
+html {
+  font-size: 0;
+}
 .Screen {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background: linear-gradient(
     90deg,
     rgba(74, 23, 158, 1) 0%,
@@ -13,6 +16,13 @@
     #fff 50%,
     rgba(0, 59, 89, 1) 100%
   );
+  margin: 0px;
+}
+
+.description {
+  font-size: 2vw;
+  text-align: left;
+  font-family: "Krona One";
 }
 
 .activate-button {
@@ -25,22 +35,47 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 50px 8px #ffffff;
-  font-size: 3em;
+  font-size: 3.5vw;
   font-family: "League Spartan";
   color: white;
   transition: background-color 0.5s ease-in;
   user-select: none;
 }
 
+.half-section {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 43vw;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.first {
+  top: 0;
+}
+
+.second {
+  top: 100vh;
+  display: flex;
+  flex-direction: row !important;
+}
+
 .activate {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 100%;
-  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.descriptionTitle {
+  font-size: 8.8vw !important;
+  color: white;
+  font-family: "League Spartan";
+  display: flex;
 }
 
 video {
@@ -49,11 +84,31 @@ video {
   object-fit: cover;
 }
 
+.titleContainer {
+  width: 31vw !important;
+  letter-spacing: 0.4vw;
+  font-weight: 100;
+  margin-right: 1vw;
+  display: flex;
+  flex-direction: column-reverse !important ;
+}
+
 .activate-button:hover {
   animation: activatebutton 0.5s;
   background-color: black;
   transition: background-color 0.5s ease-in;
   cursor: pointer;
+}
+
+.me-image {
+  width: 40vw;
+  height: 13vw;
+  background-image: url("./me.png");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 3vw;
+  box-shadow: 0px 5px 25px 5px #ffffff;
+  border-radius: 2%;
 }
 
 @keyframes activatebutton {
@@ -270,7 +325,15 @@ video {
   font-family: "League Spartan", sans-serif;
 }
 
-.intro-section {
+.border {
+  position: absolute;
+  width: 100vw;
+  height: 20px;
+  backdrop-filter: blur(3px);
+  top: calc(100vh - 10px);
+}
+
+.third-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -279,6 +342,7 @@ video {
 }
 
 .arrow-down {
-  transform: scale(6);
+  font-size: 9vw;
+
   color: #9ccddc;
 }

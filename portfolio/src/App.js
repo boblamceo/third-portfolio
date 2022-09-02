@@ -20,8 +20,12 @@ function App() {
 
   const navigate = useNavigate();
   useEffect(() => {
-    setOpen(true);
-  }, [musicPlay]);
+    if (!open) {
+      setTimeout(() => {
+        setOpen(true);
+      }, 3000);
+    }
+  }, []);
 
   return (
     <motion.div animate={{ opacity: opacity }} className="activate-container">
@@ -30,19 +34,22 @@ function App() {
           <source src={Asteroids} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="activate">
-          <div
+        <div className="activate first">
+          <motion.div
             className="activate-button"
             onClick={() => {
               setOpacity(0);
               clickplay();
               setTimeout(() => {
                 navigate("main");
-              }, 2000);
+              }, 1000);
             }}
+            initial={{ y: -1000 }}
+            animate={{ y: 0 }}
+            transition={{ type: "spring", duration: 6, stiffness: 200 }}
           >
             Activate
-          </div>{" "}
+          </motion.div>{" "}
         </div>
       </div>
       <Modal open={open} className={"modal"}>
