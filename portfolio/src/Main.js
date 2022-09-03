@@ -31,14 +31,33 @@ const Main = () => {
               Hello, I am Bob Lam
             </motion.h1>
           </div>
-          <div className="third-section">
+          <motion.div
+            className="third-section"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
             <motion.div
-              animate={{ y: [20, 0, 20] }}
-              transition={{ repeat: Infinity, type: "spring" }}
+              drag
+              dragConstraints={{ left: 10, right: 10, top: 10, bottom: 10 }}
+              dragSnapToOrigin
+              dragElastic={0.2}
             >
-              <BsArrowDownShort className="arrow-down" />
+              <motion.div
+                animate={{ y: [20, 0, 20] }}
+                transition={{ repeat: Infinity, type: "spring" }}
+              >
+                <motion.div
+                  className="arrow-clickme"
+                  animate={{ opacity: [1, 0] }}
+                  transition={{ delay: 4.5 }}
+                >
+                  Drag Me!
+                </motion.div>
+                <BsArrowDownShort className="arrow-down" />
+              </motion.div>
             </motion.div>
-          </div>
+          </motion.div>
           <div className="border"></div>
         </div>
       </div>

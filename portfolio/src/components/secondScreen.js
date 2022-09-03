@@ -66,7 +66,12 @@ const Second = () => {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.8 }}
       >
-        <motion.h1 className="descriptionTitle" variants={Titlevariant}>
+        <motion.h1
+          className="descriptionTitle"
+          variants={Titlevariant}
+          whileHover={{ scale: 1.1, rotate: [0, -10, 10, -10, 0] }}
+          transition={{ type: "spring" }}
+        >
           I am a 12 year old student
         </motion.h1>
       </motion.div>
@@ -76,12 +81,22 @@ const Second = () => {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.8 }}
       >
-        <motion.p className="description" variants={descriptionVariant}>
+        <motion.p
+          className="description"
+          variants={descriptionVariant}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring" }}
+        >
           Currently studying at ESF West Island School. I like to play the
           violin and program in Javascript. In my spare time, I like to do math
           problems and play Minecraft.
         </motion.p>
-        <motion.div className="me-image" variants={imageVariant}></motion.div>
+        <motion.div
+          className="me-image"
+          variants={imageVariant}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring" }}
+        ></motion.div>
       </motion.div>
     </div>
   );

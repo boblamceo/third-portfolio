@@ -111,6 +111,15 @@ video {
   border-radius: 2%;
 }
 
+.arrow-clickme {
+  color: white;
+  font-size: 2vw;
+  font-family: "League Spartan";
+  position: absolute;
+  left: 5vw;
+  width: 9vw;
+}
+
 @keyframes activatebutton {
   0% {
     background: linear-gradient(90deg, rgba(0, 59, 89, 1) 100%);
