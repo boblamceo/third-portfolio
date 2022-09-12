@@ -28,11 +28,19 @@ const Main = () => {
               transition={{ duration: 2 }}
               className="hello"
             >
-              Hello, I am Bob Lam
+              <motion.div
+                whileHover={{
+                  y: [0, 20, -90, 0],
+                  transition: { duration: 1, type: "spring" },
+                }}
+              >
+                Hello,&nbsp;
+              </motion.div>{" "}
+              I am Bob Lam
             </motion.h1>
           </div>
           <motion.div
-            className="third-section"
+            className="third-section arrow-section"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1, delay: 1 }}
@@ -42,6 +50,7 @@ const Main = () => {
               dragConstraints={{ left: 10, right: 10, top: 10, bottom: 10 }}
               dragSnapToOrigin
               dragElastic={0.2}
+              whileDrag={{ scale: 1.2 }}
             >
               <motion.div
                 animate={{ y: [20, 0, 20] }}
@@ -58,7 +67,7 @@ const Main = () => {
               </motion.div>
             </motion.div>
           </motion.div>
-          <div className="border"></div>
+          <div className="border1"></div>
         </div>
       </div>
 
@@ -68,6 +77,14 @@ const Main = () => {
           Your browser does not support the video tag.
         </video>
         <Second />
+        <div className="border2"></div>
+      </div>
+      <div className="screen">
+        <video loop autoPlay muted>
+          <source src={Space1} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="binoculars-background"></div>
       </div>
     </motion.div>
   );
