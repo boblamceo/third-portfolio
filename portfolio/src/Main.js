@@ -5,6 +5,7 @@ import Space1 from "./Space1.mp4";
 import Space2 from "./Space2.mp4";
 import { BsArrowDownShort } from "react-icons/bs";
 import Second from "./components/secondScreen";
+import Earth from "./earth.mp4";
 
 const Main = () => {
   return (
@@ -81,7 +82,7 @@ const Main = () => {
       </div>
       <div className="screen">
         <video loop autoPlay muted>
-          <source src={Space1} type="video/mp4" />
+          <source src={Earth} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div class="binoculars-background"></div>
