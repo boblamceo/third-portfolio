@@ -1,8 +1,11 @@
 import React from "react";
 import "../App.css";
 import { motion } from "framer-motion";
+import useSound from "use-sound";
+import Bubble from "../bubble.mp3";
 
 const Second = () => {
+  const [bubblesound] = useSound(Bubble);
   const Titlevariant = {
     offscreen: {
       x: -1000,
@@ -71,6 +74,9 @@ const Second = () => {
           variants={Titlevariant}
           whileHover={{ scale: 1.1, rotate: [0, -10, 10, -10, 0] }}
           transition={{ type: "spring" }}
+          onHoverStart={() => {
+            bubblesound();
+          }}
         >
           I am a 12 year old student
         </motion.h1>
@@ -86,6 +92,9 @@ const Second = () => {
           variants={descriptionVariant}
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring" }}
+          onHoverStart={() => {
+            bubblesound();
+          }}
         >
           Currently studying at ESF West Island School. I like to play the
           violin and program in Javascript. In my spare time, I like to do math
@@ -96,6 +105,9 @@ const Second = () => {
           variants={imageVariant}
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring" }}
+          onHoverStart={() => {
+            bubblesound();
+          }}
         ></motion.div>
       </motion.div>
     </div>
