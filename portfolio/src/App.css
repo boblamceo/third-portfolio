@@ -76,16 +76,17 @@ html {
 
 .binoculars-left {
   height: 85vh;
-  width: 40vw;
+  width: 30vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .binoculars-image {
-  width: 23vw;
+  width: 25vw;
   height: 40vw;
   max-height: 85vh;
+  min-height: 70vh;
   background-image: url("./binoculars.png");
   background-size: cover;
   background-position: center;
@@ -94,9 +95,32 @@ html {
 }
 
 .binoculars-text {
-  height: 85vh;
-  width: 50vw;
-  background-color: green;
+  height: 80vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.binoculars-title {
+  font-size: 7.5vw;
+  font-family: "League Spartan";
+  margin-top: 5vh !important;
+  margin-bottom: 0vh;
+}
+
+.binoculars-description {
+  font-size: 3vw;
+  font-family: "League Spartan";
+}
+
+.binoculars-button {
+  font-size: 3vw;
+  font-family: "League Spartan";
+  background-color: #00acd1;
+  padding: 2vw 3vw;
+  border-radius: 10vw;
+  margin-top: 6vh;
 }
 
 .activate {
