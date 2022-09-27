@@ -103,10 +103,32 @@ html {
 }
 
 .binoculars-title {
+  display: flex;
   font-size: 7.5vw;
   font-family: "League Spartan";
   margin-top: 5vh !important;
   margin-bottom: 0vh;
+  height: 7.5vw;
+  width: 31vw;
+  justify-content: center;
+  z-index: 2;
+}
+
+.binoculars-header {
+  height: 7.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.binoculars-icon {
+  position: absolute;
+  display: flex;
+  font-size: 6vw;
+  font-family: "League Spartan";
+  height: 7.5vw;
+  width: 31vw;
+  justify-content: center;
 }
 
 .binoculars-description {
@@ -130,6 +152,11 @@ html {
   position: relative;
   top: 2vh;
   right: 1vw;
+}
+
+.binoculars-imgcontainer {
+  background-color: white;
+  border-radius: 1vw;
 }
 .binoculars-button:hover {
   cursor: pointer !important;

@@ -21,6 +21,9 @@ const Main = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }}
+        onScroll={() => {
+          boingnoise();
+        }}
       >
         <div className="screen">
           <video loop autoPlay muted>
