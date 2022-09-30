@@ -41,7 +41,7 @@ const Binoculars = () => {
           </motion.h1>
         </div>
         <div className="binoculars-description">A weather app</div>
-        <div
+        <motion.div
           className="binoculars-foot"
           onMouseDown={() => {
             buttonSound();
@@ -52,9 +52,10 @@ const Binoculars = () => {
                 "https://apps.apple.com/hk/app/binoculars-weather-app/id1632741879?l=en";
             }, 500);
           }}
+          whileHover={{ scale: 1.1 }}
         >
           <div className="binoculars-button">Find out more</div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

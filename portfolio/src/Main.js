@@ -3,12 +3,14 @@ import React from "react";
 import "./App.css";
 import Space1 from "./Space1.mp4";
 import Space2 from "./Space2.mp4";
+import Space3 from "./Space3.mp4";
 import { BsArrowDownShort } from "react-icons/bs";
 import Second from "./components/secondScreen";
 import Earth from "./earth.mp4";
 import Binoculars from "./components/thirdScreen";
 import useSound from "use-sound";
 import Boing from "./boing.mp3";
+import Fourth from "./components/fourthScreen";
 
 const Main = () => {
   const [boingnoise] = useSound(Boing, {
@@ -100,6 +102,14 @@ const Main = () => {
           </video>
           <div class="binoculars-background"></div>
           <Binoculars />
+        </div>
+        <div className="screen">
+          <video loop autoPlay muted>
+            <source src={Space3} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="smake-background"></div>
+          <Fourth />
         </div>
       </motion.div>
     </div>
