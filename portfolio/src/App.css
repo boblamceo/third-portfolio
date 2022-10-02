@@ -88,17 +88,64 @@ html {
   flex-direction: column !important;
   width: 100vw;
   height: 50vh;
-  background-color: green;
   justify-content: center;
   align-items: center;
+}
+
+.smake-title {
+  font-family: "League Spartan";
+  font-size: 7vw;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.smake-description {
+  font-family: "League Spartan";
+  font-size: 3.5vw;
+  margin-top: 1vw;
+  margin-bottom: 0;
+}
+
+.smake-button {
+  padding: 3vh 5vw;
+  background-color: #39ff14;
+  border-radius: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  font-family: "League Spartan";
+  cursor: pointer;
+  user-select: none;
+  top: 0;
+  transition: top 0.5s;
+}
+
+.smake-button:active {
+  position: relative;
+  top: 2vh;
+  transition: top 0.5s;
+}
+
+.smake-back {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: none;
+  border-radius: 5vw;
+  box-shadow: 0vw 2vh 1vh -0.1vh #00272f;
 }
 
 .smake-bottom {
   display: flex;
   flex-direction: column !important;
+  align-items: center;
+  justify-content: space-evenly;
   width: 100vw;
-  height: 50vh;
-  background-color: yellow;
+  height: 45vh;
+  text-align: center;
 }
 
 .binoculars-left {
@@ -498,6 +545,15 @@ video {
   z-index: 1;
 }
 
+.border3 {
+  position: absolute;
+  width: 100vw;
+  height: 20px;
+  backdrop-filter: blur(3px);
+  top: calc(300vh - 10px);
+  z-index: 1;
+}
+
 .third-section {
   display: flex;
   justify-content: center;
@@ -528,7 +584,7 @@ video {
   height: 100vh;
 }
 .smake-background {
-  background: linear-gradient(13deg, #f70d1a 0%, #39ff12 100%);
+  background: linear-gradient(13deg, #c600eb 0%, #39ff12 100%);
   position: absolute;
   top: 300vh;
   left: 0;
@@ -544,9 +600,12 @@ video {
 .smake-image {
   width: 45vw;
   height: 20vw;
+  min-height: 30vh;
   background-image: url("./smake.jpg");
   border-radius: 2vw;
   background-size: cover;
   max-height: 45vh;
   max-width: 60vw;
+  background-position: top;
+  box-shadow: 0px 0px 50px 12px #ffffff;
 }

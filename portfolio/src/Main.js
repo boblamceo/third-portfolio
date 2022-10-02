@@ -102,6 +102,7 @@ const Main = () => {
           </video>
           <div class="binoculars-background"></div>
           <Binoculars />
+          <div className="border3"></div>
         </div>
         <div className="screen">
           <video loop autoPlay muted>
